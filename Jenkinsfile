@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'g++ hello.cpp -o hello_exec'  // Modify if inside a subfolder
+                sh 'g++ hello.cpp -o hello_exec'
             }
         }
         stage('Test') {
@@ -23,4 +23,5 @@ pipeline {
         }
     }
 }
+
 
