@@ -1,27 +1,11 @@
-pipeline {
-    agent any
-    stages {
-        stage('Build') {
+stages {
+        stage('Clone Repository') {
             steps {
-                sh 'g++ hello.cpp -o hello_exec'
-            }
-        }
-        stage('Test') {
-            steps {
-                sh './hello_exec'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deployment successful!'
-            }
-        }
-    }
-    post {
-        failure {
-            echo 'Pipeline failed!'
-        }
-    }
-}
+                script {
+                    sh 'rm -rf PES1UG22CS370_Jenkins' // Remove existing directory
+                    sh 'git clone https://github.com/meghnaroyal/PES1UG22CS34_Jenkins.git’
+                }
+            }
+        }
 
 
