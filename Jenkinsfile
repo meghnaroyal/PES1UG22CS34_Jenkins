@@ -35,6 +35,12 @@ pipeline {
             }
         }
     }
+    stage('Verify Files') {
+        steps {
+            sh 'ls -R'
+        }
+    }
+
     
     post {
         failure {
