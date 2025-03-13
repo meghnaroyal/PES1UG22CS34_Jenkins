@@ -5,7 +5,7 @@ pipeline {
         stage('Clone Repository') {
             steps {
                 script {
-                    sh 'rm -rf PES1UG22CS334_Jenkins' // Remove existing directory
+                    sh 'rm -rf PES1UG22CS34_Jenkins' // Remove existing directory
                     sh 'git clone https://github.com/meghnaroyal/PES1UG22CS34_Jenkins.git'
                 }
             }
@@ -15,7 +15,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    sh 'g++ -o PES1UG22CS334-1 PES1UG22CS334_Jenkins/working.cpp'
+                    sh 'g++ -o PES1UG22CS334-1 PES1UG22CS34_Jenkins/working.cpp'
                 }
             }
         }
